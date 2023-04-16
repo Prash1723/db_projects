@@ -9,6 +9,7 @@ from rich.table import Table
 from rich.layout import Layout
 from rich.columns import Columns
 
+# Call the console
 rc = Console()
 
 products = {"Gold": "GC=F", "Silver": "SI=F"}
@@ -20,6 +21,7 @@ int_coins = {"bicoin": "BTC-INR", "etherium": "ETH-INR"}
 currency = {"Indian Rupees": "INR=X", "Japanese Yen": "JPY=X"}
 
 def generate_protable():
+    """Generates the prices of securities available in the market"""
     table = Table(title="Securities Price", style='bold yellow')
     table.add_column("Security")
     table.add_column("Current Price")
@@ -34,6 +36,7 @@ def generate_protable():
     return table
 
 def generate_orgtable():
+    """Generates the current share price of organizations"""
     table = Table(title="Share Price", style="bold green")
     table.add_column("Share")
     table.add_column("Current Price")
@@ -47,9 +50,10 @@ def generate_orgtable():
     return table
 
 def generate_coin():
+    """Generates the current crypto currency to Indian rupees exchange rate"""
     table = Table(title="Coin Price", style="bold red")
     table.add_column("Coin")
-    table.add_column("Current Price")
+    table.add_column("Exchange rate")
 
     for k,v in int_coins.items():
         product = yf.Ticker(v)
@@ -60,9 +64,10 @@ def generate_coin():
     return table
 
 def generate_currency():
+    """Generates the current exchange rate of currencies to US Dollars"""
     table = Table(title="Currency compared to USD", style="bold blue")
     table.add_column("Currency")
-    table.add_column("Current Price")
+    table.add_column("Exchange rate")
 
     for k,v in currency.items():
         product = yf.Ticker(v)
@@ -72,21 +77,22 @@ def generate_currency():
 
     return table
 
+# Add all the tables to a panel
 pan = Panel.fit(
     Columns([generate_protable(), generate_orgtable(), generate_coin(), generate_currency()]),
-    title="Pricing panel",
-    width=80,
-    border_style="red",
-    padding=(1,2)
-        )
+    title="Pricing panel",          # Title of the panel
+    width=80,                       # Width of the panel
+    border_style="red",             # Adding border panel
+    padding=(1,2)                   # Space between tables
+)
 
 def update_table():
-
+    """Updates the table with live data"""
     # Clear console
     rc.clear()
 
     # Print the tables
-    with Live(console=rc, refresh_per_second=60) as live:
+    with Live(pan, refresh_per_second=60) as live:
         while True:
             live.update(pan)
             time.sleep(1)
