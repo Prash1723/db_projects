@@ -1,5 +1,6 @@
 import yfinance as yf
 import time
+import talib
 
 from rich.panel import Panel
 from rich.console import Console
@@ -90,7 +91,6 @@ def update_table():
     """Updates the table with live data"""
     # Clear console
     rc.clear()
-
     # Print the tables
     with Live(pan, refresh_per_second=60) as live:
         while True:
