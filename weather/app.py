@@ -16,15 +16,19 @@ layout = Layout()
 #pan = Panel()
 status = Spinner(name="dots")
 
+# Format for logging
 FORMAT='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 
+# Configuration for logging
 logging.basicConfig(
     level="NOTSET", format=FORMAT, datefmt="[%X]", handlers=[RichHandler()]
 )
 
+# Assign logger
 log = logging.getLogger("rich")
 
 async def get_weather(city):
+    """Function to call weather data for world cities"""
     try:
         client = python_weather.Client(python_weather.METRIC)
         weather = await client.get(city)
@@ -35,7 +39,13 @@ async def get_weather(city):
 
         await client.close()
 
-        x = {"City": city, "Temperature": str(temperature)+"°C", "Humidity": str(humidity)+"%", "Wind Speed": str(wind_speed)+"km/h"}
+        # Dictionary data
+        x = {
+        "City": city, 
+        "Temperature": str(temperature)+"°C", 
+        "Humidity": str(humidity)+"%", 
+        "Wind Speed": str(wind_speed)+"km/h"
+        }
     
         stats = Table(title="Weather stats", style="bold yellow")
         stats.add_column('Metrics')
