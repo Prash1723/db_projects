@@ -27,6 +27,11 @@ logging.basicConfig(
 # Assign logger
 log = logging.getLogger("rich")
 
+# File output settings
+FileOut = logging.FileHandler('app.log')
+
+log.addHandler(FileOut)
+
 async def get_weather(city):
     """Function to call weather data for world cities"""
     try:
@@ -55,8 +60,9 @@ async def get_weather(city):
             stats.add_row(f"{key}", f"{value}")
 
         rc.print(stats)
+
     except Exception as e:
-        log.error(f"Error : {e}", style='red')
+        log.error(f"Error : {e}")
 
 city = input("Enter city name :")
 
