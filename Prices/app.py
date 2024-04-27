@@ -10,6 +10,7 @@ from rich.live import Live
 from rich.table import Table
 from rich.layout import Layout
 from rich.columns import Columns
+from rich.logging import RichHandler
 
 # Call the console
 rc = Console()
