@@ -5,7 +5,6 @@ import logging
 
 from rich.panel import Panel
 from rich.console import Console
-from rich import print as rprint
 from rich.live import Live
 from rich.table import Table
 from rich.layout import Layout
@@ -86,8 +85,8 @@ def generate_coin():
 
             table.add_row(f"{k}", f"{price}")
 
-        except Exception as e:
-            log.errot(f"Error: {e}")
+    except Exception as e:
+        log.errot(f"Error: {e}")
 
     return table
 
