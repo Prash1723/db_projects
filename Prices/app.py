@@ -22,13 +22,15 @@ int_coins = {"bicoin": "BTC-INR", "etherium": "ETH-INR"}
 
 currency = {"Indian Rupees": "INR=X", "Japanese Yen": "JPY=X"}
 
+FORMAT='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+
 # Configuration for logging
 logging.basicConfig(
     level="NOTSET", format=FORMAT, datefmt="[%X]", handlers=[RichHandler()]
 )
 
 # Assign logger
-log = logging.getlogger('rich')
+log = logging.getLogger('rich')
 
 # File output settings
 FileOut = logging.FileHandler("app.log")
@@ -68,7 +70,7 @@ def generate_orgtable():
             table.add_row(f"{k}", f"{price}")
 
     except Exception as e:
-        log.errot(f"Error: {e}")
+        log.error(f"Error: {e}")
 
     return table
 
@@ -86,7 +88,7 @@ def generate_coin():
             table.add_row(f"{k}", f"{price}")
 
     except Exception as e:
-        log.errot(f"Error: {e}")
+        log.error(f"Error: {e}")
 
     return table
 
@@ -104,7 +106,7 @@ def generate_currency():
             table.add_row(f"{k}", f"{price}")
 
     except Exception as e:
-        log.errot(f"Error: {e}")
+        log.error(f"Error: {e}")
 
     return table
 
