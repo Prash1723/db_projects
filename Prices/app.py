@@ -33,7 +33,7 @@ logging.basicConfig(
 log = logging.getLogger('rich')
 
 # File output settings
-FileOut = logging.FileHandler("app.log")
+FileOut = logging.FileHandler('app.log')
 
 log.addHandler(FileOut)
 
@@ -119,7 +119,7 @@ pan = Panel.fit(
     padding=(1,2)                   # Space between tables
 )
 
-def update_table():
+def main():
     """Updates the table with live data"""
     # Clear console
     rc.clear()
@@ -130,4 +130,5 @@ def update_table():
             time.sleep(1)
 
 
-update_table()
+if __name__ == __main__:
+    main()
