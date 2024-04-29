@@ -110,16 +110,16 @@ def generate_currency():
 
     return table
 
-# Add all the tables to a panel
-pan = Panel.fit(
-    Columns([generate_protable(), generate_orgtable(), generate_coin(), generate_currency()]),
-    title="Pricing panel",          # Title of the panel
-    width=80,                       # Width of the panel
-    border_style="red",             # Adding border panel
-    padding=(1,2)                   # Space between tables
-)
-
 def main():
+    # Add all the tables to a panel
+    pan = Panel.fit(
+        Columns([generate_protable(), generate_orgtable(), generate_coin(), generate_currency()]),
+        title="Pricing panel",          # Title of the panel
+        width=80,                       # Width of the panel
+        border_style="red",             # Adding border panel
+        padding=(1,2)                   # Space between tables
+    )
+
     """Updates the table with live data"""
     # Clear console
     rc.clear()
@@ -130,5 +130,5 @@ def main():
             time.sleep(1)
 
 
-if __name__ == __main__:
+if __name__ == "__main__":
     main()
