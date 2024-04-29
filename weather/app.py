@@ -13,7 +13,6 @@ from rich.logging import RichHandler
 
 rc = Console()
 layout = Layout()
-#pan = Panel()
 status = Spinner(name="dots")
 
 # Format for logging
