@@ -64,6 +64,7 @@ async def get_weather(city):
     except Exception as e:
         log.error(f"Error : {e}")
 
-city = input("Enter city name :")
+if __name__ == "__main__":
+    city = input("Enter city name :")
 
-asyncio.run(get_weather(city))
+    asyncio.run(get_weather(city))
