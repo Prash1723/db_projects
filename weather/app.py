@@ -7,7 +7,6 @@ from rich.console import Console
 from rich.table import Table
 from rich.layout import Layout
 from rich.columns import Columns
-from rich.panel import Panel
 from rich.spinner import Spinner
 from rich.logging import RichHandler
 
