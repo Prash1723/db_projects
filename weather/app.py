@@ -5,13 +5,11 @@ import logging
 
 from rich.console import Console
 from rich.table import Table
-from rich.layout import Layout
 from rich.columns import Columns
 from rich.spinner import Spinner
 from rich.logging import RichHandler
 
 rc = Console()
-layout = Layout()
 status = Spinner(name="dots")
 
 # Format for logging
