@@ -43,18 +43,16 @@ def generate_protable():
         table = Table(title="Securities Price", style='bold yellow')
         table.add_column("Security")
         table.add_column("Current Price")
-        
-        tab1 = table
 
         for k,v in products.items():
             product = yf.Ticker(v)
             price = product.info['previousClose']
             table.add_row(f"{k}", f"{price}")
 
+        return table
+
     except Exception as e:
         log.error(f"Error: {e}")
-
-    return table
 
 def generate_orgtable():
     """Generates the current share price of organizations"""
@@ -69,10 +67,10 @@ def generate_orgtable():
 
             table.add_row(f"{k}", f"{price}")
 
+        return table
+
     except Exception as e:
         log.error(f"Error: {e}")
-
-    return table
 
 def generate_coin():
     """Generates the current crypto currency to Indian rupees exchange rate"""
@@ -87,10 +85,10 @@ def generate_coin():
 
             table.add_row(f"{k}", f"{price}")
 
+        return table
+
     except Exception as e:
         log.error(f"Error: {e}")
-
-    return table
 
 def generate_currency():
     """Generates the current exchange rate of currencies to US Dollars"""
@@ -104,11 +102,11 @@ def generate_currency():
             price = product.info['previousClose']
 
             table.add_row(f"{k}", f"{price}")
+        
+        return table
 
     except Exception as e:
         log.error(f"Error: {e}")
-
-    return table
 
 def main():
     # Add all the tables to a panel
