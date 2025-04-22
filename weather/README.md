@@ -1,8 +1,14 @@
 
 # Visualise Current Weather Stats
 
-**Aim** : To visualise current temperature, humidity and wind speed at your specified cities. Using Python-weather module to retrieve the fore mentioned data and print it using Rich module.
+To visualise current temperature, humidity and wind speed at your specified cities. Using Python-weather module to retrieve the fore mentioned data and print it using Rich module.
 
-**Author** : Praveen Shekar
+**Contributor** : Praveen Shekar
 
-**Modules used** : Python-weather, Asyncio, Rich
+## Requirements
+
+- Python 3.x
+- Modules: 
+    - Python-weather
+    - Asyncio
+    - Rich
