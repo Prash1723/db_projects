@@ -1,9 +1,30 @@
 
 # Prices of Equities available in Market
 
-**Aim**: The aim of this project is to make use of a simple Text based dashboard to view the live price of the products in the Equity Market on the terminal. I also aim to deploy this dashboard in various forms.
+The aim of this project is to visualise equities in the market using python modules on the terminal.
 
 **Author**: Praveen Shekar
-**Tool**: Python 3.9.12
 
+Requirements -
+- Python 3.x
+- Modules
+- yfinance
+- talib
+- Rich
+
+## Run
+
+To use these scripts in your server, follow the steps in the README fileiof the repo.
+
+## License
+
+The project is licensed under the MIT License. See the LICENSE.md file for more information.
+
+## Acknowledgements
+
+The analysis is inspired by the contributor's desire to automate daily processes on Linux/Mac servers.
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
