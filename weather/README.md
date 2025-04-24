@@ -17,8 +17,10 @@ To visualise current temperature, humidity and wind speed at your specified citi
 
 To use these scripts in your server, follow the steps given in the README of the main repo.
 
-Acknowledgements
+## Acknowledgements
+
 The analysis is inspired by the contributor's desire to visualise daily weather on Linux/Mac servers.
 
-Contributing
+## Contributing
+
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
