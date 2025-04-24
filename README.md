@@ -3,14 +3,15 @@
 
 The aim of this project is to create simple dashboards with python and run them on terminal. From Checking prices of daily consumables to checking the weather. All types of utility tasks that will ease your process in a project.
 
-## Types of scripts -
+Types of scripts -
 
 1. Prices of consumables. 
 2. Weather report
 
-## Requirements -
+Requirements -
 
-- Terminal with support for Python.
+- Terminal/IDE
+- Python 3.x
 - Module:
 - Rich
 
