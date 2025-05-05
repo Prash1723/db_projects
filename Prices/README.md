@@ -14,7 +14,7 @@ Requirements -
 
 ## Run
 
-To use these scripts in your server, follow the steps in the README fileiof the repo.
+To use these scripts in your server, follow the steps from here[!link](https://github.com/Prash1723/db_projects/README.md)
 
 ## License
 
