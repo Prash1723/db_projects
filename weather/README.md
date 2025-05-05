@@ -15,7 +15,7 @@ To visualise current temperature, humidity and wind speed at your specified citi
 
 ## Run
 
-To use these scripts in your server, follow the steps given in the README of the main repo.
+To use these scripts in your server, follow the steps given [here](https://github.com/Prash1723/db_projects/blob/master/README.md) 
 
 ## Acknowledgements
 
